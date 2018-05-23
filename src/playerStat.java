@@ -2,11 +2,13 @@ public class playerStat {
     private int strength;
     private int intelligence;
     private int dexterity;
+    private int health;
     private StatCalculator STC = new StatCalculator();
     public playerStat(int strength, int intelligence, int dexterity) {
         setDexterity(dexterity);
         setIntelligence(intelligence);
         setStrength(strength);
+        setHealth(strength*5);
     }
 
     public int getStrength() {
@@ -42,5 +44,13 @@ public class playerStat {
     }
     public int getPhysicalMod() {
         return STC.getPhysicalMod(strength);
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
     }
 }
